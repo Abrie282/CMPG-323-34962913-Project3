@@ -87,6 +87,7 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
+*.json
 
 # Chutzpah Test files
 _Chutzpah*
@@ -338,3 +339,8 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+#Appsettings
+ConnectedOffice\DeviceManagement_WebApp\appsettings.json
+ConnectedOffice\DeviceManagement_WebApp\bin
+ConnectedOffice\DeviceManagement_WebApp\obj

@@ -1,5 +1,4 @@
-﻿using Autofac.Core;
-using DeviceManagement_WebApp.Data;
+﻿using DeviceManagement_WebApp.Data;
 using DeviceManagement_WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +21,7 @@ namespace DeviceManagement_WebApp.Repositories
         public void Add(Category entity)
         {
             context.Category.Add(entity);
+            context.SaveChanges();
             
         }
 
@@ -65,6 +65,7 @@ namespace DeviceManagement_WebApp.Repositories
         public void Remove(Category entity)
         {
             context.Category.Remove(entity);
+            context.SaveChanges();
             
         }
 
@@ -73,11 +74,11 @@ namespace DeviceManagement_WebApp.Repositories
             context.Category.RemoveRange(entities);
         }
 
-        public async void Update(Category entity)
+        public void Update(Category entity)
         {
 
             context.Update(entity);
-            await context.SaveChangesAsync();
+            context.SaveChangesAsync();
         }
 
 
